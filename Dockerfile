@@ -1,14 +1,14 @@
-# Utilisez une image Python officielle comme base
+# Utilisez une image Python officielle
 FROM python:3.10-slim
 
-# Définir le répertoire de travail dans le conteneur
+# Définit le répertoire de travail dans le conteneur
 WORKDIR /app
 
-# Copier les fichiers locaux dans le conteneur
+# Copier les fichiers du projet dans le conteneur
 COPY . /app
 
-# Installer les dépendances du projet
+# Installer les dépendances
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Spécifier la commande pour démarrer l'application
+# Lancer le bot
 CMD ["python", "bot.py"]
